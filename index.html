@@ -3,34 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | Portfolio</title>
-<meta name="description" content="Portfolio of Your Name: AI & ML student, web developer and hackathon team lead.">
+<title>Bhuvan J J | AI & ML Portfolio</title>
+<meta name="description" content="Portfolio of Bhuvan J J, an AI & Machine Learning Engineering student building practical solutions with Python, NLP, SQL, and data analytics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F4F6FB;
-    --surface: #FFFFFF;
-    --ink: #151A2D;
-    --muted: #566079;
-    --line: #DAE0EE;
-    --accent: #3050F0;
+    --bg: #f5f5f0;
+    --surface: #fffef9;
+    --ink: #13231d;
+    --muted: #5c6b64;
+    --line: #d8dfd7;
+    --accent: #e85d3f;
     --accent-ink: #FFFFFF;
-    --accent-soft: #E7EBFE;
+    --accent-soft: #ffe6dc;
     --radius: 14px;
     --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
     --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   }
   :root[data-theme="dark"] {
-    --bg: #10131F;
-    --surface: #181C2C;
-    --ink: #E9ECF6;
-    --muted: #9AA3BC;
-    --line: #2A3048;
-    --accent: #8298FF;
-    --accent-ink: #0E1220;
-    --accent-soft: #232B54;
+    --bg: #10221b;
+    --surface: #193027;
+    --ink: #f2f4e9;
+    --muted: #b5c6bb;
+    --line: #315044;
+    --accent: #ff876b;
+    --accent-ink: #10221b;
+    --accent-soft: #3e3a35;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -93,10 +93,10 @@
   }
 
   /* ---------- Hero ---------- */
-  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 78% 30%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 30%), var(--bg); }
   #net { position: absolute; inset: 0; width: 100%; height: 100%; }
   .hero .wrap { position: relative; padding: clamp(4.5rem, 12vw, 9rem) 0 clamp(4rem, 10vw, 7.5rem); }
-  .hero h1 { font-size: clamp(2.6rem, 7.5vw, 5.2rem); font-weight: 800; max-width: 14ch; }
+  .hero h1 { font-size: clamp(2.9rem, 8vw, 6.2rem); font-weight: 800; max-width: 12ch; }
   .role { font-family: var(--display); font-size: clamp(1.3rem, 3.2vw, 2rem); font-weight: 500; margin: 1.1rem 0 0; min-height: 1.3em; color: var(--accent); }
   .caret { display: inline-block; width: 2px; height: 1em; background: currentColor; margin-left: 3px; vertical-align: -0.12em; animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
@@ -139,7 +139,9 @@
   .card {
     background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
     padding: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
   }
+  .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 14px 28px color-mix(in srgb, var(--ink) 10%, transparent); }
   .card h3 { font-size: 1.3rem; }
   .card p { margin: 0; color: var(--muted); font-size: 1rem; flex: 1; }
   .meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.9rem; color: var(--muted); }
@@ -173,7 +175,7 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .caret { animation: none; }
-    .btn, .contact-list a { transition: none; }
+    .btn, .contact-list a, .card { transition: none; }
   }
 </style>
 </head>
@@ -203,7 +205,7 @@
   <section id="home" class="hero">
     <canvas id="net" aria-hidden="true"></canvas>
     <div class="wrap">
-      <h1 id="heroName">Hi, I'm Your Name</h1>
+      <h1 id="heroName">Hi, I'm Bhuvan J J</h1>
       <p class="role" aria-live="off"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
       <p class="lede" id="heroLede"></p>
       <div class="actions">
@@ -262,29 +264,31 @@
    EDIT THIS BLOCK: it is the only part you need to change.
    ========================================================= */
 const CONFIG = {
-  name: "Your Name",
-  initials: "YN",
-  roles: ["AI & ML Student", "Full-Stack Developer", "Hackathon Team Lead"],
-  intro: "3rd year BE student in AI & Machine Learning at Your College, building useful things with AI, web development and full-stack tools.",
+  name: "Bhuvan J J",
+  initials: "BJ",
+  roles: ["AI & ML Engineering Student", "NLP Builder", "Data Analytics Enthusiast"],
+  intro: "AI & Machine Learning Engineering student at Canara Engineering College, building practical solutions with Python, AI/ML, NLP, SQL, and data analytics.",
 
   about: {
-    heading: "Hello! I'm Your Name",
+    heading: "Hello! I'm Bhuvan J J",
     paragraphs: [
-      "I'm in my 3rd year of BE, specialising in AI & Machine Learning at Your College, City. I like building things that solve a real problem, from a clinic booking system to a photo classifier.",
-      "I enjoy hackathons and leading small teams to turn rough ideas into working prototypes. Outside of code I explore new tech stacks, read documentation for fun and learn from online courses."
+      "I'm a 4th-year B.E. student specialising in Artificial Intelligence & Machine Learning at Canara Engineering College. I enjoy building practical, data-driven solutions with Python, AI/ML, NLP, SQL, and data analytics.",
+      "I've worked on projects ranging from a Skill-Demand Analyzer that studies job-market skills to VOXCRM, an AI-powered Voice CRM designed to automate customer data management and workflows. I also enjoy hackathons, exploring new tech stacks, and turning ideas into working solutions."
     ],
     stats: [
-      { value: "10+", label: "GitHub projects", fromGithub: true },
-      { value: "3+",  label: "Hackathons" },
+      { value: "3+", label: "Projects" },
+      { value: "2+",  label: "Hackathons" },
       { value: "Team", label: "Lead experience" }
     ]
   },
 
   skills: {
-    "Languages": ["Python", "JavaScript", "Java", "C"],
-    "AI & ML":   ["TensorFlow", "scikit-learn", "OpenCV", "Pandas"],
-    "Web":       ["React", "Django", "Node.js", "HTML & CSS"],
-    "Tools":     ["Git", "GitHub", "VS Code", "Netlify"]
+    "Languages": ["Python", "C", "SQL"],
+    "Data Science & AI/ML": ["Machine Learning", "NLP", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Data Preprocessing", "Feature Engineering", "EDA"],
+    "Web & Backend": ["Flask", "FastAPI", "Streamlit", "REST APIs"],
+    "Databases": ["MySQL", "SQLite"],
+    "Visualization": ["Power BI", "Tableau", "Matplotlib", "Seaborn"],
+    "Tools": ["Git", "GitHub", "VS Code", "Jupyter", "Google Colab"]
   },
 
   // Put your GitHub username here to load your latest repos automatically.
@@ -292,23 +296,23 @@ const CONFIG = {
   githubUsername: "",
   maxRepos: 6,
   projects: [
-    { title: "Smart Attendance System", description: "Face-recognition attendance for classrooms using OpenCV and a Flask dashboard.", language: "Python", repo: "", demo: "" },
-    { title: "Crop Disease Detector",   description: "CNN model that flags leaf diseases from a phone photo, with a simple React front end.", language: "TensorFlow", repo: "", demo: "" },
-    { title: "Study Planner",           description: "Full-stack planner that turns a syllabus and exam dates into a weekly schedule.", language: "JavaScript", repo: "", demo: "" }
+    { title: "Skill-Demand Analyzer", description: "Analyzed 453 Data Analyst and Data Scientist job postings, extracted in-demand skills using NLP and a 51-skill taxonomy, and built a recommendation engine for skill gaps and learning paths.", language: "Python · SQL · Pandas · NLP · Streamlit", repo: "", demo: "" },
+    { title: "VOXCRM", description: "AI-powered Voice CRM for hands-free customer data management using NLP and voice technologies, with a DAG-based workflow engine for automating CRM processes.", language: "Python · Flask · FastAPI · NLP", repo: "", demo: "" },
+    { title: "Amazon Reviews Sentiment Analysis", description: "Machine learning project that classifies Amazon product reviews into positive, negative, and neutral sentiment categories to generate customer sentiment insights.", language: "Python · Scikit-learn · Pandas · NLP", repo: "", demo: "" }
   ],
 
   certifications: [
-    { title: "Machine Learning Specialization", issuer: "Coursera", year: "2024", url: "" },
-    { title: "Python for Everybody",            issuer: "Coursera", year: "2023", url: "" },
-    { title: "Hackathon Participation",         issuer: "Your College", year: "2024", url: "" }
+    { title: "Python for Data Science", issuer: "IIT Madras", year: "", url: "" },
+    { title: "Database Management Systems", issuer: "IIT Kharagpur", year: "", url: "" },
+    { title: "Machine Learning", issuer: "Internshala", year: "", url: "" }
   ],
   verifyUrl: "",   // e.g. a Google Drive folder with your certificates
 
   contact: {
-    email: "you@example.com",
-    linkedin: "https://www.linkedin.com/in/your-handle",
-    github: "https://github.com/your-username",
-    phone: "+910000000000"
+    email: "bhuvanjathila@gmail.com",
+    linkedin: "https://www.linkedin.com/in/bhuvanjj/",
+    github: "https://github.com/BhuvanJJ0055",
+    phone: "+917795002738"
   }
 };
 
